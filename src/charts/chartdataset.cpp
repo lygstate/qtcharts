@@ -275,7 +275,7 @@ bool ChartDataSet::attachAxis(QAbstractSeries *series,QAbstractAxis *axis)
 
         // Reinitialize domain based on old axes, as the series domain initialization above
         // has trashed the old ranges, if there were any.
-        for (QAbstractAxis *oldAxis : series->d_ptr->m_axes)
+        foreach (QAbstractAxis *oldAxis, series->d_ptr->m_axes)
             oldAxis->d_ptr->initializeDomain(domain);
     }
 

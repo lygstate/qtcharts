@@ -382,7 +382,7 @@ void GLWidget::recreateSelectionFbo()
 
     delete m_selectionFbo;
 
-    const QSize deviceSize = m_fboSize * devicePixelRatioF();
+    const QSize deviceSize = m_fboSize;// * devicePixelRatioF();
     m_selectionFbo = new QOpenGLFramebufferObject(deviceSize, fboFormat);
     m_recreateSelectionFbo = false;
     m_selectionRenderNeeded = true;

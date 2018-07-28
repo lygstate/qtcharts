@@ -707,7 +707,7 @@ void AbstractBarChartItem::calculateSeriesPositionAdjustmentAndWidth()
     const QList<QAbstractSeries *> seriesList = m_series->chart()->series();
     int index = -1;
     int count = 0;
-    for (QAbstractSeries *series : seriesList) {
+    foreach (QAbstractSeries *series, seriesList) {
         if (qobject_cast<QAbstractBarSeries *>(series)){
             if (series == m_series)
                 index = count;
